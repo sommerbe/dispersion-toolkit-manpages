@@ -12,7 +12,7 @@
 man_prefix="dptk-"
 dir_prefix="man"
 
-function mk_manpage_pre() {
+function mk_manpage() {
   # args
   pdir=$1
   name=$2
@@ -33,17 +33,17 @@ function mk_manpage_pre() {
   echo "mkman $src_md -> $dst_man"
 }
 
-mk_manpage_pre "src/set" "fibonacci" 1
-mk_manpage_pre "src/set" "kritzinger" 1
-mk_manpage_pre "src/set" "cswap" 1
-mk_manpage_pre "src/measure" "dispnaamad" 1
-mk_manpage_pre "src/measure" "dispdumitrescu2017" 1
-mk_manpage_pre "src/measure" "dispcombinatorial" 1
-mk_manpage_pre "src/measure" "dispgs" 1
-mk_manpage_pre "src/measure" "pdisppermute" 1
-mk_manpage_pre "src/opt" "mindispgs" 1
-mk_manpage_pre "src/stat" "confidence" 1
-mk_manpage_pre "src/vis" "psspy" 1
-mk_manpage_pre "src/adapter" "utk" 1
-mk_manpage_pre "src/adapter" "readmatrix" 1
-mk_manpage_pre "src/adapter" "writematrix" 1
+mk_manpage "src/set" "fibonacci" 1
+mk_manpage "src/set" "kritzinger" 1
+mk_manpage "src/set" "cswap" 1
+mk_manpage "src/measure" "dispnaamad" 1
+mk_manpage "src/measure" "dispdumitrescu2017" 1
+mk_manpage "src/measure" "dispcombinatorial" 1
+mk_manpage "src/measure" "dispgs" 1
+mk_manpage "src/measure" "pdisppermute" 1
+mk_manpage "src/opt" "mindispgs" 1
+mk_manpage "src/stat" "confidence" 1
+mk_manpage "src/vis" "psspy" 1
+mk_manpage "src/adapter" "utk" 1
+mk_manpage "src/adapter" "readmatrix" 1
+mk_manpage "src/adapter" "writematrix" 1
