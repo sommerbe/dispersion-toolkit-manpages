@@ -23,28 +23,14 @@ pandoc
 
 to be installed on your system.
 
-## Conventions for developers
+## Conventions 
 
-### Versioning
-
-All releases are versioned according to the *Backus–Naur Form of Semantic Versioning 2.0.0* to be found at https://semver.org/. Basically, this entails the version core to match
-
-````
-MAJOR.MINOR.PATCH
-````
-
-where
-
-* MAJOR reflects a code change breaking backwards compatibility,
-* MINOR reflects a code change with backwards compatibility while introducing new features,
-* PATCH reflects a code change with error fixes only, and therefore remaining backwards compatible without introducing new features,
-
-and MAJOR, MINOR, and PATCH are unsigned integers in increasing order.
+Please refer to the file *conventions.md* of *../dispersion-toolkit.git*.
 
 ## License
 
 See the file *license* within the directory in which this file resides.
 
-## Authors
+## Contributors
 
-2020 - present: Benjamin Sommer
+The file *credits* (of base repository *../dispersion-toolkit.git*) contains a list of those people who contributed throughout this project's lifetime. For those who (actively) maintain this project, or parts of it, please refer to the file *maintainers* (of base repository *../dispersion-toolkit.git*).
