@@ -1,6 +1,6 @@
 % SET-CSWAP(1) 1.2.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% November 30, 2020
+% February 25, 2021
 
 # NAME
 
@@ -48,4 +48,4 @@ The resulting lattice is written to *standard output*, or to the file given by *
 
 # LIMITATION
 
-The algorithm requires two-dimensional point sets.
+The algorithm requires a d-dimensional point set, not a point set sequence.
