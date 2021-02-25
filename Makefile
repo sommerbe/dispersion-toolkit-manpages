@@ -1,0 +1,2 @@
+all:
+	bash transduce.sh
