@@ -8,7 +8,9 @@ set-kritzinger - compute a modified Fibonacci lattice according to Kritzinger an
 
 # SYNOPSIS
 
-**set-kritzinger** **\--fibonacci-index|\--m**=*INTEGER* [**\--o** *FILE*] [**\--compute-fibonacci-number|--cardinality**] [**\--no-pointset**] [**\--delimiter**=*CHARACTER*] [**\--silent**]
+**set-kritzinger** **\--fibonacci-index|\--m**=*INTEGER* [**\--o** *FILE*] [**\--delimiter**=*CHARACTER*] [**\--silent**]
+
+**set-kritzinger** **\--fibonacci-index|\--m**=*INTEGER* **\--compute-fibonacci-number|--cardinality** [**\--no-pointset**] [**\--o** *FILE*] [**\--delimiter**=*CHARACTER*] [**\--silent**]
 
 # DESCRIPTION
 
