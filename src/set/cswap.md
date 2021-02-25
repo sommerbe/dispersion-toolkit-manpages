@@ -14,7 +14,7 @@ set-cswap - swap coordinates of a given point set
 
 Swaps pairs of coordinates pseudo-randomly using an alternative Mersenne Twister, implemented as std::mt19937_64 in the C++11 standard. The pairs a chosen based on a uniform integer distribution.
 
-The axis along to swap may be chosen randomly, using *-1*, or deterministically using *INTEGER* as values to the argument **\--axis**.
+The axis along which to swap may be chosen randomly, using *-1*, or deterministically using *INTEGER* as values to the argument **\--axis**.
 
 The stochastic algorithm enables the computation of statistics, for instance with respect to dispersion of stochastic point sets. To this end, a *point set sequence* is emitted with **\--repeat**.
 
