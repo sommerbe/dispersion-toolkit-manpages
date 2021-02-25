@@ -8,7 +8,9 @@ set-fibonacci - compute a Fibonacci lattice
 
 # SYNOPSIS
 
-**set-fibonacci** **\--fibonacci-index|\--m**=*INTEGER* [**\--o** *FILE*] [**\--compute-fibonacci-number**|**\--cardinality**] [**\--no-pointset**] [**\--delimiter**=*CHARACTER*] [**\--silent**]
+**set-fibonacci** **\--fibonacci-index|\--m**=*INTEGER* [**\--o** *FILE*] [**\--delimiter**=*CHARACTER*] [**\--silent**]
+
+**set-fibonacci** **\--fibonacci-index|\--m**=*INTEGER* **\--compute-fibonacci-number**|**\--cardinality** [**\--no-pointset**] [**\--o** *FILE*] [**\--delimiter**=*CHARACTER*] [**\--silent**]
 
 # DESCRIPTION
 
