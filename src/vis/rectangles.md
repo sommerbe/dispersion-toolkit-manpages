@@ -8,7 +8,7 @@ vis-rectangles.py - visualise a sequence of a set of rectangles
 
 # SYNOPSIS
 
-**vis-rectangles.py** [**\--i** *FILE*] [**\--pts** *FILE*] [**\--delay**=*BINARY64*] [**\--image-path**=*PATTERN*] [**\--image-ppi**=*BINARY64*] [**\--colour-alpha-edge**=*BINARY64*] [**\--colour-rgba-edge**=*QUARTUPLE OF BINARY64*] [**\--colour-edge**=*STRING*] [**\--colour-alpha-fill**=*BINARY64*] [**\--colour-rgba-fill**=*QUARTUPLE OF BINARY64*] [**\--colour-fill**=*STRING*] [**\--fill**=*INTEGER*] [**\--colour-alpha-pts**=*BINARY64*] [**\--colour-rgba-pts**=*QUARTUPLE OF BINARY64*] [**\--colour-pts**=*STRING*] [**\--silent**]
+**vis-rectangles.py** [**\--i** *FILE*] [**\--pts** *FILE*] [**\--domain**=*QUARTUPLE OF BINARY64*] [**\--gridlines**=*PAIR OF INTEGER*] [**\--delay**=*BINARY64*] [**\--image-path**=*PATTERN*] [**\--image-ppi**=*BINARY64*] [**\--colour-alpha-edge**=*BINARY64*] [**\--colour-rgba-edge**=*QUARTUPLE OF BINARY64*] [**\--colour-edge**=*STRING*] [**\--colour-alpha-fill**=*BINARY64*] [**\--colour-rgba-fill**=*QUARTUPLE OF BINARY64*] [**\--colour-fill**=*STRING*] [**\--fill**=*INTEGER*] [**\--colour-alpha-pts**=*BINARY64*] [**\--colour-rgba-pts**=*QUARTUPLE OF BINARY64*] [**\--colour-pts**=*STRING*] [**\--silent**]
 
 # DESCRIPTION
 
@@ -27,6 +27,12 @@ Visualises a sequence of a set of rectangles, and how they change within this se
 
 **\--pts**=*FILE*
 :   Retrieves a 2 dimensional point set sequence from *FILE*. It is assumed that its sequence length equals the sequence length of the set of rectangles.
+
+**\--domain**=*QUARTUPLE OF BINARY64*
+:   The problem domain in d=2 dimensions, formatted as [min d=0, min d=1, max d=0, max d=1] and with min d < max d. Default: [0,0,1,1].
+
+**\--gridlines**=*PAIR OF INTEGER*
+:   The number of gridlines within the d=2 dimensional problem domain, including the domain boundary itself, formatted as [num d=0, num d=1] with each number being non-negative. Default: [7,7].
 
 **\--delay**=*BINARY64*
 :   The animation speed is slowed down by introducing a delay of *BINARY64* seconds between frame updates. A frame update corresponds to the end of point set within the sequence.
