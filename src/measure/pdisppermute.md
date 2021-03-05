@@ -1,6 +1,6 @@
 % DISP-PERMUTE(1) 1.2.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% January 28, 2021
+% March 5, 2021
 
 # NAME
 
@@ -8,7 +8,7 @@ disp-permute - compute p-dispersion with a permutation algorithm (exhaustive sea
 
 # SYNOPSIS
 
-**disp-permute** [**\--i** *FILE*] [**\--o** *FILE*] [**\--p**=2] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--boxes**] [**\--interior-boxes**] [**\--greatest-box**] [**\--silent**]
+**disp-permute** [**\--i** *FILE*] [**\--o** *FILE*] [**\--p**=2] [**\--disp**] [**\--ndisp**] [**\--debug-permute**] [**\--silent**]
 
 # DESCRIPTION
 
