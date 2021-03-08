@@ -14,8 +14,6 @@ read-matrix - reads a matrix of points
 
 Reads a matrix of points, where each column corresponds to a distinct dimension, and where each row represents a point.
 
-Every line needs to start with floating point values, or it may be entirely empty (nothing else).
-
 # OPTIONS
 
 **\--i** *FILE*, **\--i**=*FILE*
