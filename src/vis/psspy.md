@@ -1,4 +1,4 @@
-% PSS.PY(1) 1.2.0 | Dispersion Toolkit Manuals
+% PSS.PY(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
 % March 01, 2021
 

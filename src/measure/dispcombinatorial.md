@@ -1,4 +1,4 @@
-% DISP-COMBINATORIAL(1) 1.2.0 | Dispersion Toolkit Manuals
+% DISP-COMBINATORIAL(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
 % March 4, 2021
 

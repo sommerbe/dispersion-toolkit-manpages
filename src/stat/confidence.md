@@ -1,4 +1,4 @@
-% STAT-CONFIDENCE(1) 1.2.0 | Dispersion Toolkit Manuals
+% STAT-CONFIDENCE(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
 % November 30, 2020
 

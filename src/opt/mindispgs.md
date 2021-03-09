@@ -1,4 +1,4 @@
-% MINDISP-GS(1) 1.2.0 | Dispersion Toolkit Manuals
+% MINDISP-GS(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
 % December 14, 2020
 
