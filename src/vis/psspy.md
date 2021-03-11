@@ -8,7 +8,7 @@ vis-psspy.py - visualise a point set sequence
 
 # SYNOPSIS
 
-**vis-psspy.py** [**\--i** *FILE*] [**\--delay**=*BINARY64*] [**\--image-path**=*PATTERN*] [**\--image-ppi**=*BINARY64*] [**\--silent**]
+**vis-psspy.py** [**\--i** *FILE*] [**\--gridlines**=*PAIR OF INTEGER*] [**\--delay**=*BINARY64*] [**\--image-path**=*PATTERN*] [**\--image-ppi**=*BINARY64*] [**\--silent**]
 
 # DESCRIPTION
 
@@ -18,6 +18,9 @@ Visualises points of a point set sequence, how they change w.r.t. the first poin
 
 **\--i** *FILE*, **\--i**=*FILE*
 :   Retrieves a point set sequence from *FILE*. Its absence is substituted by *stdin*. The end of a point set, which equals the line #eos, updates the figure.
+
+**\--gridlines**=*PAIR OF INTEGER*
+:   The number of gridlines within the d=2 dimensional problem domain, including the domain boundary itself, formatted as [num d=0, num d=1] with each number being non-negative. Default: [7,7].
 
 **\--delay**=*BINARY64*
 :   The animation speed is slowed down by introducing a delay of *BINARY64* seconds between frame updates. A frame update corresponds to the end of point set within the sequence.

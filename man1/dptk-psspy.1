@@ -8,6 +8,7 @@ vis-psspy.py - visualise a point set sequence
 .SH SYNOPSIS
 .PP
 \f[B]vis-psspy.py\f[R] [\f[B]--i\f[R] \f[I]FILE\f[R]]
+[\f[B]--gridlines\f[R]=\f[I]PAIR OF INTEGER\f[R]]
 [\f[B]--delay\f[R]=\f[I]BINARY64\f[R]]
 [\f[B]--image-path\f[R]=\f[I]PATTERN\f[R]]
 [\f[B]--image-ppi\f[R]=\f[I]BINARY64\f[R]] [\f[B]--silent\f[R]]
@@ -21,6 +22,12 @@ the first point set of this sequence.
 Retrieves a point set sequence from \f[I]FILE\f[R].
 Its absence is substituted by \f[I]stdin\f[R].
 The end of a point set, which equals the line #eos, updates the figure.
+.TP
+.B \f[B]--gridlines\f[R]=\f[I]PAIR OF INTEGER\f[R]
+The number of gridlines within the d=2 dimensional problem domain,
+including the domain boundary itself, formatted as [num d=0, num d=1]
+with each number being non-negative.
+Default: [7,7].
 .TP
 .B \f[B]--delay\f[R]=\f[I]BINARY64\f[R]
 The animation speed is slowed down by introducing a delay of
