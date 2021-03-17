@@ -46,6 +46,7 @@ mk_manpage "src/ana" "convergence" 1
 mk_manpage "src/stat" "confidence" 1
 mk_manpage "src/vis" "psspy" 1
 mk_manpage "src/vis" "rectangles" 1
+mk_manpage "src/vis" "graphs" 1
 mk_manpage "src/adapter" "utk" 1
 mk_manpage "src/adapter" "readmatrix" 1
 mk_manpage "src/adapter" "writematrix" 1
