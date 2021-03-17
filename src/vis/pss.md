@@ -4,11 +4,11 @@
 
 # NAME
 
-vis-psspy.py - visualise a point set sequence
+vis-pss.py - visualise a point set sequence
 
 # SYNOPSIS
 
-**vis-psspy.py** [**\--i** *FILE*] [**\--gridlines**=*PAIR OF INTEGER*] [**\--delay**=*BINARY64*] [**\--image-path**=*PATTERN*] [**\--image-ppi**=*BINARY64*] [**\--silent**]
+**vis-pss.py** [**\--i** *FILE*] [**\--gridlines**=*PAIR OF INTEGER*] [**\--delay**=*BINARY64*] [**\--image-path**=*PATTERN*] [**\--image-ppi**=*BINARY64*] [**\--silent**]
 
 # DESCRIPTION
 
