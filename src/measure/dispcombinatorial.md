@@ -1,6 +1,6 @@
 % DISP-COMBINATORIAL(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% March 4, 2021
+% March 17, 2021
 
 # NAME
 
@@ -9,6 +9,8 @@ disp-combinatorial - compute dispersion with a combinatorial algorithm (exhausti
 # SYNOPSIS
 
 **disp-combinatorial** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--boxes**] [**\--interior-boxes**] [**\--greatest-box**] [**\--box-area**] [**\--box-area-min**=*BINARY64*] [**\--box-area-max**=*BINARY64*] [**\--no-box-coordinates**] [**\--silent**]
+
+**disp-combinatorial** **\--graph-layout** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
 
 # DESCRIPTION
 
@@ -74,6 +76,9 @@ The measures are written to *standard output*, or to the file given by **\--o** 
 **\--no-box-coordinates**
 :   Disables the return of box coordinates. This option becomes only useful in combination with **\--box-area**. It is useful for subsequent computation of statistics of only the areas of the boxes. If  **\--box-area** is not given, no box is returned. Otherwise, see **\--box-area**.
 
+**\--graph-layout**
+:   Reads the arguments of point set P_i, stored in its file header, and streams the first argument out of this list as the argument to a function mapping to dispersion, n*dispersion and/or number of boxes.
+
 **\--silent**
 :   Suppress comments in the output stream, yielding only the computed value. The latter could be the point set or its cardinality.
 
@@ -122,6 +127,19 @@ P_0 | . | . | .
 P_1 | . | . | .
 ... | . | . | .
 P_m | . | . | .
+
+Notice that the first column is not returned either. The header is returned as a commenting line as well.
+
+## Graph layout with dispersion and number of boxes
+
+A point set of cardinality *m* with the first axis representing the argument used to generate the point set P_i, and with each other axis representing a computed measure.
+
+point set | argument | disp | n*disp | #boxes
+--- | --- | --- | --- | ---
+P_0 | . | . | . | .
+P_1 | . | . | . | .
+... | . | . | . | .
+P_m | . | . | . | .
 
 Notice that the first column is not returned either. The header is returned as a commenting line as well.
 
