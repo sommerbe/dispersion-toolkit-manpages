@@ -1,6 +1,6 @@
 % DISP-GS(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% December 3, 2020
+% March 17, 2020
 
 # NAME
 
@@ -9,6 +9,8 @@ disp-gs - compute dispersion using a grow&shrink algorithm
 # SYNOPSIS
 
 **disp-gs** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
+
+**disp-gs** **\--graph-layout** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
 
 # DESCRIPTION
 
@@ -37,10 +39,15 @@ The measures are written to *standard output*, or to the file given by **\--o** 
 **\--count-boxes**
 :   Counts all empty boxes of *P_i*, including interiour and exteriour boxes.
 
+**\--graph-layout**
+:   Reads the arguments of point set P_i, stored in its file header, and streams the first argument out of this list as the argument to a function mapping to dispersion, n*dispersion and/or number of boxes.
+
 **\--silent**
 :   Suppress comments in the output stream, yielding only the computed value. The latter could be the point set or its cardinality.
 
 # RETURN FORMAT
+
+## Dispersion, number of boxes
 
 A point set of cardinality *m* with each axis representing a computed measure.
 
@@ -52,3 +59,16 @@ P_1 | . | . | .
 P_m | . | . | .
 
 Notice that the first column is not returned.
+
+## Graph layout with dispersion and number of boxes
+
+A point set of cardinality *m* with the first axis representing the argument used to generate the point set P_i, and with each other axis representing a computed measure.
+
+point set | argument | disp | n*disp | #boxes
+--- | --- | --- | --- | ---
+P_0 | . | . | . | .
+P_1 | . | . | . | .
+... | . | . | . | .
+P_m | . | . | . | .
+
+Notice that the first column is not returned either. The header is returned as a commenting line as well.
