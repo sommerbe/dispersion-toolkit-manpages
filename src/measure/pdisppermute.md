@@ -1,14 +1,14 @@
 % DISP-PERMUTE(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% March 5, 2021
+% March 17, 2021
 
 # NAME
 
-disp-permute - compute p-dispersion with a permutation algorithm (exhaustive search)
+pdisp-permute - compute p-dispersion with a permutation algorithm (exhaustive search)
 
 # SYNOPSIS
 
-**disp-permute** [**\--i** *FILE*] [**\--o** *FILE*] [**\--p**=2] [**\--disp**] [**\--ndisp**] [**\--debug-permute**] [**\--silent**]
+**pdisp-permute** [**\--i** *FILE*] [**\--o** *FILE*] [**\--p**=2] [**\--disp**] [**\--ndisp**] [**\--debug-permute**] [**\--silent**]
 
 # DESCRIPTION
 
