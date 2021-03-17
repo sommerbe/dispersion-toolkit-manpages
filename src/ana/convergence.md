@@ -1,4 +1,4 @@
-% STAT-CONFIDENCE(1) 1.3.0 | Dispersion Toolkit Manuals
+% ANA-CONVERGENCE(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
 % March 17, 2021
 
