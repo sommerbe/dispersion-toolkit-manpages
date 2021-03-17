@@ -1,6 +1,6 @@
 % DISP-NAAMAD(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% December 9, 2020
+% March 17, 2020
 
 # NAME
 
@@ -9,6 +9,8 @@ disp-naamad - compute dispersion with algorithm of Naamad et. al. 1984
 # SYNOPSIS
 
 **disp-naamad** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
+
+**disp-naamad** **\--graph-layout** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
 
 # DESCRIPTION
 
@@ -37,6 +39,9 @@ The measures are written to *standard output*, or to the file given by **\--o** 
 **\--count-boxes**
 :   Counts all empty RRs of *P_i*, considered as RRs in the publication.
 
+**\--graph-layout**
+:   Reads the arguments of point set P_i, stored in its file header, and streams the first argument out of this list as the argument to a function mapping to dispersion, n*dispersion and/or number of boxes.
+
 **\--silent**
 :   Suppress comments in the output stream, yielding only the computed value. The latter could be the point set or its cardinality.
 
@@ -54,6 +59,19 @@ P_1 | . | . | .
 P_m | . | . | .
 
 Notice that the first column is not returned.
+
+## Graph layout with dispersion and number of RRs
+
+A point set of cardinality *m* with the first axis representing the argument used to generate the point set P_i, and with each other axis representing a computed measure.
+
+point set | argument | disp | n*disp | #RRs
+--- | --- | --- | --- | ---
+P_0 | . | . | . | .
+P_1 | . | . | . | .
+... | . | . | . | .
+P_m | . | . | . | .
+
+Notice that the first column is not returned either. The header is returned as a commenting line as well.
 
 # LIMITATION
 
