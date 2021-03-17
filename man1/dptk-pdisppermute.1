@@ -12,6 +12,11 @@ pdisp-permute - compute p-dispersion with a permutation algorithm
 \f[B]pdisp-permute\f[R] [\f[B]--i\f[R] \f[I]FILE\f[R]] [\f[B]--o\f[R]
 \f[I]FILE\f[R]] [\f[B]--p\f[R]=2] [\f[B]--disp\f[R]] [\f[B]--ndisp\f[R]]
 [\f[B]--debug-permute\f[R]] [\f[B]--silent\f[R]]
+.PP
+\f[B]pdisp-permute\f[R] \f[B]--graph-layout\f[R] [\f[B]--i\f[R]
+\f[I]FILE\f[R]] [\f[B]--o\f[R] \f[I]FILE\f[R]] [\f[B]--p\f[R]=2]
+[\f[B]--disp\f[R]] [\f[B]--ndisp\f[R]] [\f[B]--debug-permute\f[R]]
+[\f[B]--silent\f[R]]
 .SH DESCRIPTION
 .PP
 Computes p-dispersion or \f[I]n\f[R] * p-dispersion.
@@ -51,6 +56,11 @@ Computes p-dispersion of \f[I]P_i\f[R], multiplied by the cardinality
 .TP
 .B \f[B]--debug-permute\f[R]
 Show all combination of point indices used.
+.TP
+.B \f[B]--graph-layout\f[R]
+Reads the arguments of point set P_i, stored in its file header, and
+streams the first argument out of this list as the argument to a
+function mapping to dispersion, n*dispersion and/or number of boxes.
 .TP
 .B \f[B]--silent\f[R]
 Suppress comments in the output stream, yielding only the computed
@@ -104,6 +114,75 @@ T}
 .TE
 .PP
 Notice that the first column is not returned.
+.SS Graph layout with dispersion and number of boxes
+.PP
+A point set of cardinality \f[I]m\f[R] with the first axis representing
+the argument used to generate the point set P_i, and with each other
+axis representing a computed measure.
+.PP
+.TS
+tab(@);
+l l l l l.
+T{
+point set
+T}@T{
+argument
+T}@T{
+disp
+T}@T{
+n*disp
+T}@T{
+#boxes
+T}
+_
+T{
+P_0
+T}@T{
+\&.
+T}@T{
+\&.
+T}@T{
+\&.
+T}@T{
+\&.
+T}
+T{
+P_1
+T}@T{
+\&.
+T}@T{
+\&.
+T}@T{
+\&.
+T}@T{
+\&.
+T}
+T{
+\&...
+T}@T{
+\&.
+T}@T{
+\&.
+T}@T{
+\&.
+T}@T{
+\&.
+T}
+T{
+P_m
+T}@T{
+\&.
+T}@T{
+\&.
+T}@T{
+\&.
+T}@T{
+\&.
+T}
+.TE
+.PP
+Notice that the first column is not returned either.
+The header is returned as a commenting line as well.
 .SH LIMITATION
 .PP
 No known limitations.

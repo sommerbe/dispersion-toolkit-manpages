@@ -10,6 +10,8 @@ pdisp-permute - compute p-dispersion with a permutation algorithm (exhaustive se
 
 **pdisp-permute** [**\--i** *FILE*] [**\--o** *FILE*] [**\--p**=2] [**\--disp**] [**\--ndisp**] [**\--debug-permute**] [**\--silent**]
 
+**pdisp-permute** **\--graph-layout** [**\--i** *FILE*] [**\--o** *FILE*] [**\--p**=2] [**\--disp**] [**\--ndisp**] [**\--debug-permute**] [**\--silent**]
+
 # DESCRIPTION
 
 Computes p-dispersion or *n* * p-dispersion.
@@ -36,6 +38,9 @@ The measures are written to *standard output*, or to the file given by **\--o** 
 **\--debug-permute**
 :   Show all combination of point indices used.
 
+**\--graph-layout**
+:   Reads the arguments of point set P_i, stored in its file header, and streams the first argument out of this list as the argument to a function mapping to dispersion, n*dispersion and/or number of boxes.
+
 **\--silent**
 :   Suppress comments in the output stream, yielding only the computed value. The latter could be the point set or its cardinality.
 
@@ -53,6 +58,19 @@ P_1 | . | .
 P_m | . | .
 
 Notice that the first column is not returned.
+
+## Graph layout with dispersion and number of boxes
+
+A point set of cardinality *m* with the first axis representing the argument used to generate the point set P_i, and with each other axis representing a computed measure.
+
+point set | argument | disp | n*disp | #boxes
+--- | --- | --- | --- | ---
+P_0 | . | . | . | .
+P_1 | . | . | . | .
+... | . | . | . | .
+P_m | . | . | . | .
+
+Notice that the first column is not returned either. The header is returned as a commenting line as well.
 
 # LIMITATION
 
