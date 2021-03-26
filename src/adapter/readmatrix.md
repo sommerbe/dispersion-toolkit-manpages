@@ -1,6 +1,6 @@
 % READ-MATRIX(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% February 26, 2021
+% March 26, 2021
 
 # NAME
 
@@ -8,7 +8,7 @@ read-matrix - reads a matrix of points
 
 # SYNOPSIS
 
-**read-matrix** [**\--i** *FILE*] [**\--o** *FILE*] **\--domain-boundary**=*LIST_OF_NUMBERS* [**\--mathematica**] [**\--csv**] [**\--point-delimiter**=*CHARACTER*] [**\--coord-delimiter**=*CHARACTER*] [**\--point-prefix**=*CHARACTER*] [**\--point-suffix**=*CHARACTER*] [**\--set-prefix**=*CHARACTER*] [**\--set-suffix**=*CHARACTER*] [**\--delimiter**=*CHARACTER*] [**\--silent**]
+**read-matrix** [**\--i** *FILE*] [**\--o** *FILE*] **\--domain-boundary**=*LIST_OF_NUMBERS*|**\--domain-boundary-unity** [**\--mathematica**] [**\--csv**] [**\--point-delimiter**=*CHARACTER*] [**\--coord-delimiter**=*CHARACTER*] [**\--point-prefix**=*CHARACTER*] [**\--point-suffix**=*CHARACTER*] [**\--set-prefix**=*CHARACTER*] [**\--set-suffix**=*CHARACTER*] [**\--delimiter**=*CHARACTER*] [**\--silent**]
 
 # DESCRIPTION
 
@@ -32,6 +32,9 @@ Reads a matrix of points, where each column corresponds to a distinct dimension,
     n1 n2 ... nk
 
     with k = 2 * dimension of point set, and which is ordered such that the first k/2 numbers correspond to the lower bound of the problem domain, and the remaining numbers to its upper bound. In addition, these numbers are ordered with increasing dimension index.
+
+**\--domain-boundary-unity**
+:   Defines the domain-boundary to be [0,1]^d, in d dimensions.
 
 **\--mathematica**
 :   The matrix format of Mathematica. Here:
