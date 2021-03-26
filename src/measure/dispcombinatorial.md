@@ -1,6 +1,6 @@
 % DISP-COMBINATORIAL(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% March 17, 2021
+% March 26, 2021
 
 # NAME
 
@@ -14,7 +14,7 @@ disp-combinatorial - compute dispersion with a combinatorial algorithm (exhausti
 
 # DESCRIPTION
 
-Computes dispersion of a sequence (of size *m*) of point sets, each having varying cardinality *n* and dimension *d*=2.
+Computes dispersion of a sequence (of size *m*) of point sets, each having varying cardinality *n* and dimension *d* > 0.
 
 The dispersion is based on greatest empty rectangles bounded by the problem domain, whereas each area is the multiplication of their side lengths. This measure is not on a torus.
 
@@ -26,7 +26,7 @@ Computed measures:
 * greatest empty boxes
 * areas of greatest empty boxes
 
-The algorithm employs a combinatorial search through all rectangles. This (unfortunate) situation leads to worst case O(*n*^5) in time, and any case O(*n*) in space.
+The algorithm employs a combinatorial search through all rectangles. This (unfortunate) situation leads to worst case O(*n*^(2*d*+1)) in time, and any case O((*d*+1)*n*) in space.
 
 The measures are written to *standard output*, or to the file given by **\--o** *FILE*.
 
@@ -145,4 +145,4 @@ Notice that the first column is not returned either. The header is returned as a
 
 # LIMITATION
 
-The algorithm requires a two-dimensional point sets sequence.
+None. The algorithm accepts any d > 0 dimensional point set sequence.
