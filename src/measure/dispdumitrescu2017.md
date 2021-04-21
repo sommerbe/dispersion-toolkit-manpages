@@ -8,9 +8,9 @@ disp-dumitrescu2017 - compute dispersion with algorithm of Dumitrescu and Jiang,
 
 # SYNOPSIS
 
-**disp-dumitrescu2017** **\--epsilon** *BINARY64* [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
+**disp-dumitrescu2017** **\--epsilon** *BINARY64* [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**] [**\--debug**]
 
-**disp-dumitrescu2017** **\--epsilon** *BINARY64* **\--graph-layout** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
+**disp-dumitrescu2017** **\--epsilon** *BINARY64* **\--graph-layout** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**] [**\--debug**]
 
 # DESCRIPTION
 
@@ -47,6 +47,9 @@ The measures are written to *standard output*, or to the file given by **\--o** 
 
 **\--silent**
 :   Suppress comments in the output stream, yielding only the computed value. The latter could be the point set or its cardinality.
+
+**\--debug**
+:   Streams debugging information to designated output. In particular, it will stream each considered slab along with its computed dispersion, first in d=2, then in d=3, so the tuple (lower bound, upper bound, disp d=2, disp d=3) results, whereas lower bound and upper bound relate to the slab's extent along the d=3 axis.
 
 # RETURN FORMAT
 

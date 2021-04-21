@@ -12,12 +12,12 @@ and Jiang, 2017
 \f[B]disp-dumitrescu2017\f[R] \f[B]--epsilon\f[R] \f[I]BINARY64\f[R]
 [\f[B]--i\f[R] \f[I]FILE\f[R]] [\f[B]--o\f[R] \f[I]FILE\f[R]]
 [\f[B]--disp\f[R]] [\f[B]--ndisp\f[R]] [\f[B]--count-boxes\f[R]]
-[\f[B]--silent\f[R]]
+[\f[B]--silent\f[R]] [\f[B]--debug\f[R]]
 .PP
 \f[B]disp-dumitrescu2017\f[R] \f[B]--epsilon\f[R] \f[I]BINARY64\f[R]
 \f[B]--graph-layout\f[R] [\f[B]--i\f[R] \f[I]FILE\f[R]] [\f[B]--o\f[R]
 \f[I]FILE\f[R]] [\f[B]--disp\f[R]] [\f[B]--ndisp\f[R]]
-[\f[B]--count-boxes\f[R]] [\f[B]--silent\f[R]]
+[\f[B]--count-boxes\f[R]] [\f[B]--silent\f[R]] [\f[B]--debug\f[R]]
 .SH DESCRIPTION
 .PP
 Computes dispersion, \f[I]n\f[R] * dispersion, and/or the number of RRs
@@ -83,6 +83,13 @@ function mapping to dispersion, n*dispersion and/or number of boxes.
 Suppress comments in the output stream, yielding only the computed
 value.
 The latter could be the point set or its cardinality.
+.TP
+.B \f[B]--debug\f[R]
+Streams debugging information to designated output.
+In particular, it will stream each considered slab along with its
+computed dispersion, first in d=2, then in d=3, so the tuple (lower
+bound, upper bound, disp d=2, disp d=3) results, whereas lower bound and
+upper bound relate to the slab\[cq]s extent along the d=3 axis.
 .SH RETURN FORMAT
 .SS Dispersion, number of boxes
 .PP
