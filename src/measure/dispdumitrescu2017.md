@@ -1,6 +1,6 @@
 % DISP-DUMITRESCU2017(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% March 17, 2020
+% April 21, 2020
 
 # NAME
 
@@ -8,9 +8,9 @@ disp-dumitrescu2017 - compute dispersion with algorithm of Dumitrescu and Jiang,
 
 # SYNOPSIS
 
-**disp-dumitrescu2017** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
+**disp-dumitrescu2017** **\--epsilon** *BINARY64* [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
 
-**disp-dumitrescu2017** **\--graph-layout** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
+**disp-dumitrescu2017** **\--epsilon** *BINARY64* **\--graph-layout** [**\--i** *FILE*] [**\--o** *FILE*] [**\--disp**] [**\--ndisp**] [**\--count-boxes**] [**\--silent**]
 
 # DESCRIPTION
 
@@ -29,6 +29,9 @@ The measures are written to *standard output*, or to the file given by **\--o** 
 
 **\--o** *FILE*, **\--o**=*FILE*
 :   Redirects the measures to *FILE*, opened in overwrite mode (not appending mode). Without *FILE*, results are forwarded to *stdout*. Errors encountered during the program's execution are streamed into *stderr*, and not into either *stdout* or *FILE*.
+
+**\--epsilon** *BINARY64*
+:   Sets the approximation parameter *epsilon*, with 0 <= *epsilon* <= 1. In the limit *epsilon* -> 0, the algorithm would theoretically compute an exact result. It is also known as (1 - *epsilon*) approximation. Here, *epsilon* specifies the width of the slabs within which greatest empty rectangles (in d=2 dimensions) are found, to be projected back into d=3 using the slab width.
 
 **\--disp**
 :   Computes dispersion of *P_i*.
