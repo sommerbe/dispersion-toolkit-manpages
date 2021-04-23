@@ -1,6 +1,6 @@
 % READ-MATRIX(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% March 26, 2021
+% April 23, 2021
 
 # NAME
 
@@ -27,7 +27,7 @@ Reads a matrix of points, where each column corresponds to a distinct dimension,
 
 
 **\--domain-boundary**=*LIST_OF_NUMBERS*
-:   A list of numbers
+:   A list of non-quoted numbers
 
     n1 n2 ... nk
 
@@ -89,6 +89,16 @@ Reads a matrix of points, where each column corresponds to a distinct dimension,
 
 **\--silent**
 :   Suppress comments in the output stream, yielding only the computed value. The latter could be the point set or its cardinality.
+
+# EXAMPLES
+
+Read a standard CSV file where each coordinates are separated by a hard whitespace (' '), and where each point is on a distinct line, from a d=3 dimensional point set, bounded by [0,1]^3:
+
+    read-matrix --i Frolov_3_3_basic.dat --csv --domain-boundary 0 0 0 1 1 1
+
+Read matrices exported from Mathematica, from a d=2 dimensional point set, bounded by [0,1]x[0,1]:
+
+    read-matrix --i matrix-mathematica.csv --mathematica --domain-boundary 0 0 1 1
 
 # LIMITATION
 
