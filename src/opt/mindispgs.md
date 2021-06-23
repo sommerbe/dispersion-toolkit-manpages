@@ -1,6 +1,6 @@
 % MINDISP-GS(1) 1.3.0 | Dispersion Toolkit Manuals
 % Benjamin Sommer
-% December 14, 2020
+% June 23, 2021
 
 # NAME
 
@@ -49,7 +49,7 @@ Memory complexity: 2 * n * BINARY64 + n * d * U64 = n * (d + 2) * 64bit.
 :   Feed the number of actual iterations needed to the chosen output. This number is returned before the optimised point set.
 
 **\--pointset-sequence**
-:   Feed each intermediate point set, of each iteration, to the output. This option is required to visualise the modifications made, for instance using **pssy.py**.
+:   Feed each intermediate point set, of each iteration, to the output. The iteration number is prepended to the point set's argument list, allowing to compute a graph layout of this sequence using some dispersion measure compute programs as a post-process. This option is required to visualise the modifications made, for instance using **pssy.py**.
    
 **\--silent**
 :   Suppress comments in the output stream, yielding only the computed value. The latter could be the point set or its cardinality.
